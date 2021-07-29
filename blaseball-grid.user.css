@@ -1,0 +1,180 @@
+/* ==UserStyle==
+@name           Blaseball Grid
+@namespace      github.com/absotively
+@version        1.0.0
+@description    A Blaseball user style for viewing more games in less screen space
+@author         Absotively
+==/UserStyle== */
+
+@-moz-document domain("www.blaseball.com"), domain("before.sibr.dev") {
+    /* Insert code here... */
+    div.League-Countdown + ul {
+        width: calc(100vw - 80px);
+        margin: 0 calc(40px - 50vw + 50%);
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(14em, 1fr));
+        grid-gap: 1em;
+    }
+    
+    .GameWidget {
+        margin: 0;
+        width: 100%;
+        grid-template-rows: min-content min-content 1fr;
+        grid-template-columns: 1fr;
+        gap: 0;
+        align-items: stretch;
+    }
+    
+    .GameWidget .Widget-Header-Wrapper,
+    .GameWidget .Widget-Display-Visual {
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
+    }
+    
+    .GameWidget .Widget-Display-Visual,
+    .GameWidget .Widget-Log {
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
+    }
+    
+    .GameWidget .Widget-ScoreBacking {
+        padding: 5px 0;
+        width: 100%;
+        height: min-content;
+        display: grid;
+        grid-template-columns: min-content 1fr min-content;
+        gap: 5px 10px;
+        align-items: center;
+    }
+    
+    .GameWidget .GameWidget-ScoreLine {
+        display: contents;
+    }
+    
+    .GameWidget .GameWidget-ScoreTeamColorBar {
+        width: 25px;
+        height: 25px;
+        font-size: 16px;
+        margin-left: 5px;
+        grid-column: 1;
+    }
+    
+    .GameWidget .GameWidget-ScoreTeam {
+        grid-column: 2;
+    }
+    
+    .GameWidget .GameWidget-ScoreName {
+        font-size: 18px;
+    }
+    
+    .GameWidget .GameWidget-ScoreTeamInfo {
+        width: max-content;
+        font-size: 12px;
+    }
+    
+    .GameWidget .GameWidget-ScoreRecord {
+        font-size: 12px;
+    }
+    
+    .GameWidget .GameWidget-ScoreNumber {
+        height: 25px;
+        padding: 12px 6px;
+        margin: -12px 3px 12px -6px;
+        font-size: 20px;
+        text-align: center;
+        width: auto;
+    }
+    
+    .GameWidget .Widget-Display-Visual {
+        padding: 0 5px 5px;
+        grid-row: 2;
+    }
+    
+    .GameWidget .Widget-Display-Body {
+        grid-template-columns: min-content 1fr;
+        grid-template-rows: min-content min-content 1fr;
+        width: 100%;
+        gap: 2px;
+    }
+    
+    .GameWidget .Widget-Bases {
+        width: 2.5em;
+    }
+    
+    .GameWidget .Widget-Outs {
+        grid-column: 2/3;
+        grid-row: 1;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+    .GameWidget .Widget-Outs-Row {
+        width: min-content;
+    }
+    
+    .GameWidget .Widget-Outs-DotList {
+        margin-left: 10px;
+        width: min-content;
+    }
+    
+    .GameWidget .Widget-Outs-Dots {
+        font-size: 24px;
+    }
+    
+    .GameWidget .Widget-AtBat {
+        grid-column: 1/3;
+        grid-row: 2;
+    }
+    
+    .GameWidget .Widget-PlayerLine {
+        margin: 0;
+    }
+    
+    .GameWidget .Widget-PlayerStatusIcon {
+        height: 20px;
+        width: 20px;
+        margin-right: 5px;
+        display: block;
+    }
+    
+    .GameWidget .Widget-PlayerStatusLabel {
+        display: none;
+    }
+    
+    .GameWidget .Widget-Outs-Label {
+        display: none;
+    }
+    
+    .GameWidget .Widget-Log {
+        grid-column: 1/3;
+        grid-row: 3;
+        width: fit-content;
+        padding: 5px;
+        display: block flex;
+        min-height: 80px;
+    }
+    
+    .GameWidget .Widget-Display-Body .Widget-Log {
+        display: none;
+    }
+    
+    .GameWidget .Widget-Log-Content {
+        padding: 2px;
+        font-size: 14px;
+    }
+    
+    .GameWidget .Widget-Log-PlayCount {
+        right: 2px;
+        bottom: 2px;
+        font-size: 12px;
+    }
+    
+    .GameWidget.IsComplete .Widget-Log {
+        display: none;
+    }
+    
+    .GameWidget.IsComplete .GameWidget-Outcome {
+        grid-row: 2/4;
+        min-height: 80px;
+    }
+}
