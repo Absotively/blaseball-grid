@@ -1,8 +1,8 @@
 /* ==UserStyle==
 @name           Blaseball Grid
 @namespace      github.com/absotively
-@version        1.0.0
-@description    A Blaseball user style for viewing more games in less screen space
+@version        1.0.1
+@description    Another Big Screen Blaseball knockoff/variant
 @author         Absotively
 ==/UserStyle== */
 
@@ -176,5 +176,12 @@
     .GameWidget.IsComplete .GameWidget-Outcome {
         grid-row: 2/4;
         min-height: 80px;
+        justify-content: start;
+    }
+    
+    .GameWidget .GameWidget-Outcome-Blurb {
+        line-height: 1.4;
+        padding: 4px 0;
+        height: auto;
     }
 }
