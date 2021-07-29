@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Blaseball Grid
 @namespace      github.com/absotively
-@version        1.0.1
+@version        1.0.2
 @description    Another Big Screen Blaseball knockoff/variant
 @author         Absotively
 ==/UserStyle== */
@@ -79,7 +79,7 @@
     .GameWidget .GameWidget-ScoreNumber {
         height: 25px;
         padding: 12px 6px;
-        margin: -12px 3px 12px -6px;
+        margin: -12px 3px -12px -6px;
         font-size: 20px;
         text-align: center;
         width: auto;
