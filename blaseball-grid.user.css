@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Blaseball Grid
 @namespace      github.com/absotively
-@version        1.0.3
+@version        1.1.0
 @description    Another Big Screen Blaseball knockoff/variant
 @author         Absotively
 ==/UserStyle== */
@@ -198,5 +198,73 @@
         line-height: 1.4;
         padding: 4px 0;
         height: auto;
+    }
+    
+    .GameWidget-Full-Upcoming .Widget-ScoreBacking {
+        gap: 0;
+        grid-auto-flow: row dense;
+    }
+    
+    .GameWidget-Full-Upcoming .GameWidget-ScoreTeam,
+    .GameWidget-Full-Upcoming .GameWidget-ScoreTeamInfo {
+        display: contents;
+    }
+    
+    .GameWidget-Full-Upcoming .GameWidget-ScoreTeamColorBar {
+        grid-row-end: span 2;
+        margin-right: 10px;
+    }
+    
+    .GameWidget-Full-Upcoming .GameWidget-ScoreRecord {
+        grid-column: 2;
+    }
+    
+    .GameWidget-Full-Upcoming .GameWidget-WinChance {
+        grid-column: 3;
+        grid-row-end: span 2;
+        font-size: 1.6em;
+    }
+    
+    .GameWidget-Full-Upcoming .GameWidget-ScoreNumber {
+        display: none;
+    }
+    
+    .GameWidget-Full-Upcoming .GameWidget-Upcoming-InfoBody {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .GameWidget-Full-Upcoming .GameWidget-Upcoming-Body:first-child {
+        display: grid;
+        grid-template-columns: min-content 1fr;
+        grid-column-end: span 2;
+    }
+    
+    .GameWidget-Full-Upcoming .GameWidget-Upcoming-Body {
+        display: block;
+    }
+    
+    .GameWidget-Full-Upcoming .GameWidget-Upcoming-Icon,
+    .GameWidget-Full-Upcoming .GameWidget-Upcoming-WeatherLabel,
+    .GameWidget-Full-Upcoming .GameWidget-Upcoming-StadiumLabel {
+        display: none;
+    }
+    
+    .GameWidget-Full-Upcoming .GameWidget-Upcoming-Icon.GameWidget-Upcoming-Icon--Pitcher {
+        display: block;
+        margin: 5px;
+    }
+    
+    .GameWidget-Full-Upcoming .GameWidget-Upcoming-Icon.GameWidget-Upcoming-Icon--Pitcher {
+        display: block;
+        margin: 5px;
+    }
+    
+    .GameWidget-Full-Upcoming .GameWidget-Upcoming-Pitchers-Wrapper {
+        margin: 2px 0;
+    }
+    
+    .GameWidget-Full-Upcoming .GameWidget-Upcoming-OddsTeam {
+        display: none;
     }
 }
