@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Blaseball Grid
 @namespace      github.com/absotively
-@version        1.1.1
+@version        1.1.2
 @description    Another Big Screen Blaseball knockoff/variant
 @author         Absotively
 ==/UserStyle== */
@@ -26,13 +26,17 @@
     }
     
     .GameWidget .Widget-Header-Wrapper,
-    .GameWidget .Widget-Display-Visual {
+    .GameWidget .Widget-Display-Visual,
+    .GameWidget-Full-Upcoming .Widget-Header-Wrapper,
+    .GameWidget-Full-Upcoming .GameWidget-Upcoming-Info {
         border-bottom-left-radius: 0px;
         border-bottom-right-radius: 0px;
     }
     
     .GameWidget .Widget-Display-Visual,
-    .GameWidget .Widget-Log {
+    .GameWidget .Widget-Log,
+    .GameWidget-Full-Upcoming .GameWidget-Upcoming-Info,
+    .GameWidget-Full-Upcoming .GameWidget-Upcoming-Bets {
         border-top-left-radius: 0px;
         border-top-right-radius: 0px;
     }
@@ -271,5 +275,9 @@
     .GameWidget-Full-Upcoming .GameWidget-Upcoming-Header,
     .GameWidget-Full-Upcoming .GameWidget-Upcoming-Label {
         display: none;
+    }
+    
+    .GameWidget-Full-Upcoming .GameWidget-Upcoming-BetButtons {
+        margin: 3px 0 10px 0;
     }
 }
