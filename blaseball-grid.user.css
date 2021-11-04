@@ -1,14 +1,16 @@
 /* ==UserStyle==
 @name           Blaseball Grid
 @namespace      github.com/absotively
-@version        1.1.3
+@version        1.2.0
 @description    Another Big Screen Blaseball knockoff/variant
 @author         Absotively
 ==/UserStyle== */
 
 @-moz-document domain("www.blaseball.com"), domain("before.sibr.dev") {
-    /* Insert code here... */
-    div.League-Countdown + ul {
+    /* Game widget wrapper element */
+    div.Main-Body > div:not([class]) > ul:not([class]),   /* Expansion era */
+    div.Main-Body > ul:not([class]) /* Short Circuit 1 */
+    {
         width: calc(100vw - 80px);
         margin: 0 calc(40px - 50vw + 50%);
         display: grid;
@@ -35,10 +37,15 @@
     
     .GameWidget .Widget-Display-Visual,
     .GameWidget .Widget-Log,
+    .GameWidget .GameWidget-Outcome,
     .GameWidget-Full-Upcoming .GameWidget-Upcoming-Info,
     .GameWidget-Full-Upcoming .GameWidget-Upcoming-Bets {
         border-top-left-radius: 0px;
         border-top-right-radius: 0px;
+    }
+    
+    div.Main-Body > ul:not([class]) .GameWidget .Widget-Header {
+        grid-template-columns: min-content auto;
     }
     
     .GameWidget .Widget-ScoreBacking {
@@ -120,12 +127,20 @@
         width: 2.5em;
     }
     
+    .GameWidget .Widget-Bases rect {
+        stroke-width: 8px;
+    }
+    
     .GameWidget .Widget-Outs {
         grid-column: 2/3;
         grid-row: 1;
         flex-direction: row;
         justify-content: space-between;
         margin-top: 2px;
+    }
+    
+    div.Main-Body > ul:not([class]) .GameWidget .Widget-Outs {
+        margin-top: 4px;
     }
     
     .GameWidget .Widget-Outs-Row {
@@ -139,6 +154,10 @@
     
     .GameWidget .Widget-Outs-Dots {
         font-size: 24px;
+    }
+    
+    div.Main-Body > ul:not([class]) .GameWidget .Widget-Outs-Dots {
+        height: 46px;
     }
     
     .GameWidget .Widget-AtBat {
@@ -168,9 +187,9 @@
     .GameWidget .Widget-Log {
         grid-column: 1/3;
         grid-row: 3;
-        width: fit-content;
+        width: 100%;
         padding: 5px;
-        display: block flex;
+        display: block;
         min-height: 80px;
     }
     
